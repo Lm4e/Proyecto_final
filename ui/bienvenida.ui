@@ -6,21 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>870</width>
-    <height>499</height>
+    <width>944</width>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QLabel" name="lbl_nombre_app">
    <property name="geometry">
     <rect>
-     <x>690</x>
+     <x>740</x>
      <y>10</y>
      <width>101</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>   MedScope MVC</string>
@@ -29,23 +35,28 @@
   <widget class="QLabel" name="lbl_bienvenida">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>170</y>
-     <width>831</width>
-     <height>181</height>
+     <x>40</x>
+     <y>270</y>
+     <width>751</width>
+     <height>271</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Swis721 LtCn BT</family>
-     <pointsize>22</pointsize>
+     <family>Swis721 Ex BT</family>
+     <pointsize>9</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 255);</string>
+    <string notr="true">color: rgb(255, 255, 255);
+font: 9pt &quot;Swis721 Ex BT&quot;;
+
+</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Bienvenido a MedScope MVC, tu plataforma integral para el análisis y procesamiento de señales e imágenes médicas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic; text-decoration: underline;&quot;&gt;Bienvenido a MedScope MVC, tu plataforma integral para el análisis y procesamiento de señales e imágenes médicas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="textFormat">
     <enum>Qt::TextFormat::AutoText</enum>
@@ -60,11 +71,16 @@
   <widget class="QPushButton" name="btn_iniciar">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>370</y>
+     <x>240</x>
+     <y>540</y>
      <width>511</width>
      <height>71</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(117, 117, 117);
+color: rgb(0, 0, 0);
+font: 18pt &quot;Snap ITC&quot;;</string>
    </property>
    <property name="text">
     <string>LOGIN</string>
@@ -73,10 +89,10 @@
   <widget class="QLabel" name="lbl_imagen_app">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>10</y>
-     <width>450</width>
-     <height>135</height>
+     <x>20</x>
+     <y>20</y>
+     <width>361</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="text">
@@ -89,7 +105,50 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>510</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>:/newPrefix/6ea8b4b5-18fe-481b-938d-0ba1caddb056.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>951</width>
+     <height>641</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="fondo_bienvenida.qrc">:/Gemini_Generated_Image_18g9sm18g9sm18g9.jfif</pixmap>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>lbl_nombre_app</zorder>
+  <zorder>lbl_bienvenida</zorder>
+  <zorder>btn_iniciar</zorder>
+  <zorder>lbl_imagen_app</zorder>
+  <zorder>label</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="fondo_bienvenida.qrc"/>
+ </resources>
  <connections/>
 </ui>

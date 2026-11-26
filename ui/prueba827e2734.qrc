@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="hola hola">
+    <file>logo_app_ok.png</file>
+  </qresource>
+</RCC>

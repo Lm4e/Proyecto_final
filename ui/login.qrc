@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>imagen_login.jfif</file>
+  </qresource>
+</RCC>
