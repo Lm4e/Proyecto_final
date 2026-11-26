@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>709</width>
+    <height>431</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,7 +52,22 @@
     <string>muestra informacion de usuario</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>230</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="menu_senales.qrc"/>
+ </resources>
  <connections/>
 </ui>

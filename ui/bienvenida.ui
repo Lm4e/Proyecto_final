@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>944</width>
-    <height>628</height>
+    <width>946</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,14 +19,15 @@
   <widget class="QLabel" name="lbl_nombre_app">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>10</y>
-     <width>101</width>
-     <height>31</height>
+     <x>690</x>
+     <y>0</y>
+     <width>281</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true">color: rgb(255, 255, 255);
+font: 700 9pt &quot;Script&quot;;</string>
    </property>
    <property name="text">
     <string>   MedScope MVC</string>
@@ -35,10 +36,10 @@
   <widget class="QLabel" name="lbl_bienvenida">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>270</y>
-     <width>751</width>
-     <height>271</height>
+     <x>190</x>
+     <y>20</y>
+     <width>541</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -56,7 +57,7 @@ font: 9pt &quot;Swis721 Ex BT&quot;;
 </string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic; text-decoration: underline;&quot;&gt;Bienvenido a MedScope MVC, tu plataforma integral para el análisis y procesamiento de señales e imágenes médicas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:700; font-style:italic; text-decoration: underline;&quot;&gt;Bienvenido a MedScope MVC, tu plataforma integral para el análisis y procesamiento de señales e imágenes médicas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="textFormat">
     <enum>Qt::TextFormat::AutoText</enum>
@@ -71,10 +72,10 @@ font: 9pt &quot;Swis721 Ex BT&quot;;
   <widget class="QPushButton" name="btn_iniciar">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>30</x>
      <y>540</y>
-     <width>511</width>
-     <height>71</height>
+     <width>311</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -91,8 +92,8 @@ font: 18pt &quot;Snap ITC&quot;;</string>
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>361</width>
-     <height>131</height>
+     <width>141</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
