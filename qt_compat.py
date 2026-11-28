@@ -10,13 +10,13 @@ import io
 import re
 
 try:
-    from PyQt6.QtGui import QPixmap
+    from PyQt6.QtGui import QPainter, QPixmap
     from PyQt6.QtWidgets import QApplication, QWidget, QMessageBox
     from PyQt6.uic import loadUi as _loadUi
 
     QT_VERSION = 6
 except ImportError:
-    from PyQt5.QtGui import QPixmap
+    from PyQt5.QtGui import QPainter, QPixmap
     from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox
     from PyQt5.uic import loadUi as _loadUi
 
@@ -33,4 +33,4 @@ def loadUi(ruta_ui, widget):
     return _loadUi(io.StringIO(xml), widget)
 
 
-__all__ = ["QApplication", "QWidget", "QMessageBox", "QPixmap", "loadUi", "QT_VERSION"]
+__all__ = ["QApplication", "QWidget", "QMessageBox", "QPainter", "QPixmap", "loadUi", "QT_VERSION"]

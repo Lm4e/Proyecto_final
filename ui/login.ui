@@ -6,172 +6,147 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>690</width>
-    <height>479</height>
+    <width>727</width>
+    <height>526</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="lbl_usuario">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>200</y>
-     <width>101</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Usurario:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_password">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>240</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Contrseña:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="txt_usuario">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>200</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>escribe tu usuario</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="txt_password">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>250</y>
-     <width>141</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>escribe tu contraseña</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_ingresar">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>310</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-font: 9pt &quot;8514oem&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Validar Login</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_limpiar">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>310</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 9pt &quot;8514oem&quot;;
-background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Limpiar</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>-10</x>
-     <y>0</y>
-     <width>711</width>
-     <height>491</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>imagen_login.jfif</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>0</y>
-     <width>281</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 9pt &quot;8514oem&quot;;
+  <property name="styleSheet">
+   <string notr="true">QWidget#Form {
+    border-image: url(:/newPrefix/imagen_login.jfif) 0 0 0 0 stretch stretch;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="logoprueba.qrc">:/logo/prueba2.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;8514oem&quot;;
 color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>PORTAL DE ACCESO BIOMEDICO</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_imagen_app">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>20</y>
-     <width>121</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>logo_app_ok.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <zorder>label</zorder>
-  <zorder>lbl_usuario</zorder>
-  <zorder>lbl_password</zorder>
-  <zorder>txt_usuario</zorder>
-  <zorder>txt_password</zorder>
-  <zorder>btn_ingresar</zorder>
-  <zorder>btn_limpiar</zorder>
-  <zorder>label_2</zorder>
-  <zorder>lbl_imagen_app</zorder>
+         </property>
+         <property name="text">
+          <string>PORTAL DE ACCESO BIOMEDICO</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_usuario">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Usuario:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_usuario">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Ingrese su documento</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_password">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Contraseña:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_password">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>Ingrese la contraseña</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn_ingresar">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 9pt &quot;8514oem&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Validar Login</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_limpiar">
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;8514oem&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Limpiar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="login.qrc"/>
+  <include location="logoprueba.qrc"/>
+ </resources>
  <connections/>
 </ui>

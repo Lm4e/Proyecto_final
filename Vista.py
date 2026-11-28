@@ -1,5 +1,5 @@
 import os
-from qt_compat import QWidget, QMessageBox, QPixmap, loadUi
+from qt_compat import QPainter, QWidget, QMessageBox, QPixmap, loadUi
 
 CARPETA_UI = os.path.join(os.path.dirname(__file__), "ui")
 
@@ -36,8 +36,11 @@ class VentanaLogin(QWidget):
     def __init__(self):
         super().__init__()
         loadUi(os.path.join(CARPETA_UI, "login.ui"), self)
-        poner_imagen(self.label, "fondo_login.png")  # fondo
-        poner_imagen(self.lbl_imagen_app, "logo_app_ok.png")  # logo
+        self.setStyleSheet("")  # quita el fondo por recurso (:/...) que trae el .ui
+        self._fondo = QPixmap(os.path.join(CARPETA_UI, "fondo_login.png"))  # fondo de toda la ventana
+        if self._fondo.isNull():
+            print("AVISO: no se pudo cargar la imagen fondo_login.png")
+        poner_imagen(self.label, "logo_app_ok.png")  # logo
         self._controlador = None
         if hasattr(self, "btn_ingresar"):
             self.btn_ingresar.clicked.connect(self.ingresar)
@@ -46,6 +49,13 @@ class VentanaLogin(QWidget):
 
     def asignarControlador(self, c):
         self._controlador = c
+
+    def paintEvent(self, event):
+        """Dibuja el fondo estirado a todo el tamano de la ventana."""
+        if not self._fondo.isNull():
+            pintor = QPainter(self)
+            pintor.drawPixmap(self.rect(), self._fondo)
+            pintor.end()
 
     def limpiar(self):
         if hasattr(self, "txt_usuario"):
