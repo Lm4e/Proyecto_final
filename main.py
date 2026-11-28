@@ -7,6 +7,7 @@ from Vista import (
     VentanaLogin,
     VentanaMenuImagenes,
     VentanaMenuSenales,
+    VentanaRegistro,
 )
 from Controlador import Coordinador
 
@@ -19,13 +20,15 @@ def main():
     v_login = VentanaLogin()
     v_menu_img = VentanaMenuImagenes()
     v_menu_sen = VentanaMenuSenales()
+    v_registro = VentanaRegistro(v_login)
 
-    coordinador = Coordinador(modelo, v_bienvenida, v_login, v_menu_img, v_menu_sen)
+    coordinador = Coordinador(modelo, v_bienvenida, v_login, v_menu_img, v_menu_sen, v_registro)
 
     v_bienvenida.asignarControlador(coordinador)
     v_login.asignarControlador(coordinador)
     v_menu_img.asignarControlador(coordinador)
     v_menu_sen.asignarControlador(coordinador)
+    v_registro.asignarControlador(coordinador)
 
     coordinador.iniciar()
     sys.exit(app.exec())

@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="Fondo_11">
+    <file>imagen_fondo_registro.png</file>
+  </qresource>
+</RCC>

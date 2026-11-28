@@ -1,5 +1,7 @@
 import os
-from qt_compat import QPainter, QWidget, QMessageBox, QPixmap, loadUi
+from qt_compat import (
+    ECHO_PASSWORD, QDialog, QMessageBox, QPainter, QPixmap, QPushButton, QWidget, loadUi,
+)
 
 CARPETA_UI = os.path.join(os.path.dirname(__file__), "ui")
 
@@ -46,6 +48,25 @@ class VentanaLogin(QWidget):
             self.btn_ingresar.clicked.connect(self.ingresar)
         if hasattr(self, "btn_limpiar"):
             self.btn_limpiar.clicked.connect(self.limpiar)
+        self._crear_boton_registro()
+
+    def _crear_boton_registro(self):
+        """Usa btn_registrar si existe en el .ui; si no, lo crea debajo de los otros botones."""
+        if not hasattr(self, "btn_registrar"):
+            self.btn_registrar = QPushButton("Crear cuenta")
+            self.btn_registrar.setStyleSheet("background-color: rgb(255, 255, 255);")
+            self.gridLayout_2.addWidget(self.btn_registrar, 1, 0, 1, 2)
+        self.btn_registrar.clicked.connect(self.abrir_registro)
+
+    def abrir_registro(self):
+        if self._controlador is not None:
+            self._controlador.abrir_registro()
+
+    def poner_usuario(self, usuario):
+        """Deja el usuario escrito y el cursor en la contraseña (tras registrarse)."""
+        self.txt_usuario.setText(usuario)
+        self.txt_password.setText("")
+        self.txt_password.setFocus()
 
     def asignarControlador(self, c):
         self._controlador = c
@@ -68,6 +89,56 @@ class VentanaLogin(QWidget):
         p = self.txt_password.text() if hasattr(self, "txt_password") else ""
         if self._controlador is not None:
             self._controlador.login(u, p)
+
+    def mensaje(self, texto, error=False):
+        if error:
+            QMessageBox.warning(self, "Aviso", texto)
+        else:
+            QMessageBox.information(self, "Información", texto)
+
+
+class VentanaRegistro(QDialog):
+    """Formulario para crear un usuario nuevo (se disena en ui/registro.ui)."""
+
+    # Texto de cada item de cmb_rol (Designer) -> rol que se guarda en la base de datos.
+    ROLES = {
+        "Imágenes médicas": "imagenes",
+        "Señales biomédicas": "senales",
+    }
+
+    def __init__(self, padre=None):
+        super().__init__(padre)
+        loadUi(os.path.join(CARPETA_UI, "registro.ui"), self)
+        self._controlador = None
+        if hasattr(self, "fondo_registro"):
+            poner_imagen(self.fondo_registro, "imagen_fondo_registro.png")  # fondo
+        self.txt_password.setEchoMode(ECHO_PASSWORD)
+        self.txt_confirmar.setEchoMode(ECHO_PASSWORD)
+        self.btn_registrar.clicked.connect(self.registrar)
+        self.btn_cancelar.clicked.connect(self.reject)
+
+    def asignarControlador(self, c):
+        self._controlador = c
+
+    def limpiar(self):
+        for campo in (self.txt_nombre, self.txt_usuario, self.txt_password, self.txt_confirmar):
+            campo.setText("")
+        self.cmb_rol.setCurrentIndex(0)
+        self.txt_nombre.setFocus()
+
+    def registrar(self):
+        rol = self.ROLES.get(self.cmb_rol.currentText())
+        if rol is None:
+            self.mensaje("Elige un rol: Imágenes médicas o Señales biomédicas", error=True)
+            return
+        if self._controlador is not None:
+            self._controlador.registrar(
+                self.txt_nombre.text(),
+                self.txt_usuario.text(),
+                self.txt_password.text(),
+                self.txt_confirmar.text(),
+                rol,
+            )
 
     def mensaje(self, texto, error=False):
         if error:

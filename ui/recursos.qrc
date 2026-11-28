@@ -1,5 +1,5 @@
 <RCC>
-  <qresource prefix="newPrefix">
-    <file>6ea8b4b5-18fe-481b-938d-0ba1caddb056.png</file>
+  <qresource prefix="fondo_iimagenes">
+    <file>fondo_medico.png</file>
   </qresource>
 </RCC>
