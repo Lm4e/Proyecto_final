@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="fondo_iimagenes">
+    <file>imagen_fondo_ecografia.png</file>
     <file>fondo_medico.png</file>
   </qresource>
 </RCC>

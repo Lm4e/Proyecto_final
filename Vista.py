@@ -195,3 +195,34 @@ class VentanaMenuSenales(QWidget):
     def abrir_mat(self):
         if self._controlador is not None:
             self._controlador.abrir_ventana_mat()
+
+class VentanaMenuImagenes(QWidget):
+    def __init__(self):
+        super().__init__()
+        loadUi(os.path.join(CARPETA_UI, "menu_imagenes.ui"), self)
+        poner_imagen(self.fondo_menu_imagenes, "imagen_fondo_ecografia.png")  # fondo
+        self._controlador = None
+        if hasattr(self, "btn_imagenes"):
+            self.btn_imagenes.clicked.connect(self.abrir_imagenes)
+
+    def asignarControlador(self, c):
+        self._controlador = c
+
+    def poner_datos_usuario(self, info):
+        if hasattr(self, "lbl_usuario"):
+            self.lbl_usuario.setText(
+                f"ID: {info['id']} | {info['nombre']} | Rol: {info['rol']} | {info['fecha']} {info['hora']}"
+            )
+
+    def abrir_imagenes(self):
+        if self._controlador is not None:
+            self._controlador.abrir_ventana_imagenes()
+
+class VentanaImagenes(QWidget):
+    def __init__(self):
+        super().__init__()
+        loadUi(os.path.join(CARPETA_UI, "imagenes.ui"), self)
+        self._controlador = None
+
+    def asignarControlador(self, c):
+        self._controlador = c
