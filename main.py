@@ -1,6 +1,6 @@
 
 import sys
-from PyQt5.QtWidgets import QApplication
+from qt_compat import QApplication
 from Modelo import BaseDatos
 from Vista import (
     VentanaBienvenida,
@@ -28,7 +28,7 @@ def main():
     v_menu_sen.asignarControlador(coordinador)
 
     coordinador.iniciar()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 
 if __name__ == "__main__":

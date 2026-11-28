@@ -1,14 +1,25 @@
 import os
-from PyQt5.QtWidgets import QWidget, QMessageBox
-from PyQt5.uic import loadUi
+from qt_compat import QWidget, QMessageBox, QPixmap, loadUi
 
 CARPETA_UI = os.path.join(os.path.dirname(__file__), "ui")
+
+
+def poner_imagen(label, nombre_archivo):
+    """Carga una imagen de la carpeta ui/ en un QLabel desde codigo."""
+    pixmap = QPixmap(os.path.join(CARPETA_UI, nombre_archivo))
+    if pixmap.isNull():
+        print(f"AVISO: no se pudo cargar la imagen {nombre_archivo}")
+        return
+    label.setPixmap(pixmap)
+    label.setScaledContents(True)
 
 
 class VentanaBienvenida(QWidget):
     def __init__(self):
         super().__init__()
         loadUi(os.path.join(CARPETA_UI, "bienvenida.ui"), self)
+        poner_imagen(self.label_2, "fondo_bienvenida.png")  # fondo
+        poner_imagen(self.lbl_imagen_app, "logo_app_ok.png")  # logo
         self._controlador = None
         if hasattr(self, "btn_iniciar"):
             self.btn_iniciar.clicked.connect(self.ir_login)
@@ -25,6 +36,8 @@ class VentanaLogin(QWidget):
     def __init__(self):
         super().__init__()
         loadUi(os.path.join(CARPETA_UI, "login.ui"), self)
+        poner_imagen(self.label, "fondo_login.png")  # fondo
+        poner_imagen(self.lbl_imagen_app, "logo_app_ok.png")  # logo
         self._controlador = None
         if hasattr(self, "btn_ingresar"):
             self.btn_ingresar.clicked.connect(self.ingresar)

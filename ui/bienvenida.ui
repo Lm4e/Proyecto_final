@@ -72,8 +72,8 @@ font: 9pt &quot;Swis721 Ex BT&quot;;
   <widget class="QPushButton" name="btn_iniciar">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>540</y>
+     <x>130</x>
+     <y>500</y>
      <width>311</width>
      <height>61</height>
     </rect>
@@ -100,7 +100,7 @@ font: 18pt &quot;Snap ITC&quot;;</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../../OneDrive/Imágenes/Captura de pantalla 2026-11-22 163503.bmp</pixmap>
+    <pixmap>logo_app_ok.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -118,9 +118,6 @@ font: 18pt &quot;Snap ITC&quot;;</string>
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>:/newPrefix/6ea8b4b5-18fe-481b-938d-0ba1caddb056.png</pixmap>
-   </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
@@ -131,14 +128,17 @@ font: 18pt &quot;Snap ITC&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>951</width>
-     <height>641</height>
+     <height>601</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/fondodebienvenida/fondo_bienvenida.png);</string>
    </property>
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap resource="fondo_bienvenida.qrc">:/Gemini_Generated_Image_18g9sm18g9sm18g9.jfif</pixmap>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <zorder>label_2</zorder>

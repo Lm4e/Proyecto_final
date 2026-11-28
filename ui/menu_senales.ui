@@ -66,8 +66,6 @@
    </property>
   </widget>
  </widget>
- <resources>
-  <include location="menu_senales.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

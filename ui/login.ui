@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>200</y>
-     <width>91</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
@@ -35,7 +35,7 @@ font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
     <rect>
      <x>10</x>
      <y>240</y>
-     <width>111</width>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>
@@ -50,7 +50,7 @@ font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
   <widget class="QLineEdit" name="txt_usuario">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>140</x>
      <y>200</y>
      <width>113</width>
      <height>21</height>
@@ -63,7 +63,7 @@ font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
   <widget class="QLineEdit" name="txt_password">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>150</x>
      <y>250</y>
      <width>141</width>
      <height>21</height>
@@ -120,7 +120,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="login.qrc">:/newPrefix/imagen_login.jfif</pixmap>
+    <pixmap>imagen_login.jfif</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -156,7 +156,7 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../../OneDrive/Imágenes/Captura de pantalla 2026-11-22 163503.bmp</pixmap>
+    <pixmap>logo_app_ok.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -172,9 +172,6 @@ color: rgb(255, 255, 255);</string>
   <zorder>label_2</zorder>
   <zorder>lbl_imagen_app</zorder>
  </widget>
- <resources>
-  <include location="login.qrc"/>
-  <include location="prueba827e2734.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
