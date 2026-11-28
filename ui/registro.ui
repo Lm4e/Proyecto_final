@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>727</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="lbl_nombre">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Nombre:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_usuario">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Usuario:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_password">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Contraseña:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_confirmar">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Confirmar contraseña:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_rol">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>240</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Rol:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_nombre">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>80</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_usuario">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>120</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_password">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>160</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_confirmar">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>200</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmb_rol">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>240</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Paciente</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Administrador</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Programador</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="btn_registrar">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>320</y>
+     <width>79</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Registrar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cancelar">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>320</y>
+     <width>79</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fondo_registro">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>0</y>
+     <width>761</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../../../proyecto_final_informatica2/Proyecto_final/ui/fondo_fondo.qrc">:/Fondo_11/imagen_fondo_registro.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>fondo_registro</zorder>
+  <zorder>lbl_nombre</zorder>
+  <zorder>lbl_usuario</zorder>
+  <zorder>lbl_password</zorder>
+  <zorder>lbl_confirmar</zorder>
+  <zorder>lbl_rol</zorder>
+  <zorder>txt_nombre</zorder>
+  <zorder>txt_usuario</zorder>
+  <zorder>txt_password</zorder>
+  <zorder>txt_confirmar</zorder>
+  <zorder>cmb_rol</zorder>
+  <zorder>btn_registrar</zorder>
+  <zorder>btn_cancelar</zorder>
+ </widget>
+ <resources>
+  <include location="../../../proyecto_final_informatica2/Proyecto_final/ui/fondo_fondo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

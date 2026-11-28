@@ -36,7 +36,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="logoprueba.qrc">:/logo/prueba2.jpg</pixmap>
+          <pixmap>:/logo/prueba2.jpg</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -57,7 +57,7 @@ color: rgb(255, 255, 255);</string>
        <item row="0" column="3">
         <spacer name="horizontalSpacer">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -107,7 +107,7 @@ font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
+        <enum>QLineEdit::EchoMode::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Ingrese la contraseña</string>
@@ -116,7 +116,7 @@ font: 14pt &quot;MS Reference Sans Serif&quot;;</string>
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QPushButton" name="btn_ingresar">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
@@ -127,7 +127,7 @@ font: 9pt &quot;8514oem&quot;;</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QPushButton" name="btn_limpiar">
          <property name="styleSheet">
           <string notr="true">font: 9pt &quot;8514oem&quot;;
@@ -138,6 +138,13 @@ background-color: rgb(255, 255, 255);</string>
          </property>
         </widget>
        </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btn_registrar">
+         <property name="text">
+          <string>Crear Cuenta</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
     </layout>
@@ -145,6 +152,7 @@ background-color: rgb(255, 255, 255);</string>
   </layout>
  </widget>
  <resources>
+  <include location="login.qrc"/>
   <include location="login.qrc"/>
   <include location="logoprueba.qrc"/>
  </resources>

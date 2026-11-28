@@ -111,3 +111,16 @@ class BaseDatos:
         ))
         conn.commit()
         conn.close()
+    def registrar_usuario(self, usuario, password, nombre, rol):
+        conn = self.conectar()
+        try:
+            conn.execute(
+                "INSERT INTO usuarios (usuario, password, nombre, rol) VALUES (?, ?, ?, ?)",
+                (usuario, password, nombre, rol),
+            )
+            conn.commit()
+            return True, f"Usuario '{usuario}' registrado correctamente"
+        except sqlite3.IntegrityError:
+            return False, f"El usuario '{usuario}' ya existe, elige otro"
+        finally:
+            conn.close()

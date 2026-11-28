@@ -11,16 +11,24 @@ import re
 
 try:
     from PyQt6.QtGui import QPainter, QPixmap
-    from PyQt6.QtWidgets import QApplication, QWidget, QMessageBox
+    from PyQt6.QtWidgets import (
+        QApplication, QComboBox, QDialog, QFormLayout, QHBoxLayout,
+        QLineEdit, QMessageBox, QPushButton, QVBoxLayout, QWidget,
+    )
     from PyQt6.uic import loadUi as _loadUi
 
     QT_VERSION = 6
+    ECHO_PASSWORD = QLineEdit.EchoMode.Password
 except ImportError:
     from PyQt5.QtGui import QPainter, QPixmap
-    from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox
+    from PyQt5.QtWidgets import (
+        QApplication, QComboBox, QDialog, QFormLayout, QHBoxLayout,
+        QLineEdit, QMessageBox, QPushButton, QVBoxLayout, QWidget,
+    )
     from PyQt5.uic import loadUi as _loadUi
 
     QT_VERSION = 5
+    ECHO_PASSWORD = QLineEdit.Password
 
 _ENUM_QT6 = re.compile(r"\b(\w+)::\w+::(\w+)\b")  # Qt::TextFormat::AutoText -> Qt::AutoText
 
@@ -33,4 +41,8 @@ def loadUi(ruta_ui, widget):
     return _loadUi(io.StringIO(xml), widget)
 
 
-__all__ = ["QApplication", "QWidget", "QMessageBox", "QPainter", "QPixmap", "loadUi", "QT_VERSION"]
+__all__ = [
+    "QApplication", "QComboBox", "QDialog", "QFormLayout", "QHBoxLayout", "QLineEdit",
+    "QMessageBox", "QPainter", "QPixmap", "QPushButton", "QVBoxLayout", "QWidget",
+    "ECHO_PASSWORD", "QT_VERSION", "loadUi",
+]
